@@ -1,28 +1,72 @@
-# How to contribute
+# 贡献指南 / Contributing Guide
 
-We'd love to accept your patches and contributions to this project.
+欢迎来到这个仓库！不论你是独立创作者、合作者还是提出想法的朋友，这份指南会帮助你以高效、舒适、符合个人节奏的方式参与进来。
 
-## Contribution process
+## 核心价值观 / Core Values
 
-### Code reviews
+- **真实与透明**：坦诚表达现状、期望与限制，避免信息不对称。
+- **持续成长**：鼓励学习、尝试与复盘，允许犯错并及时总结。
+- **尊重边界**：理解彼此的时间与精力，不强求即时响应。
+- **高质量交付**：保持代码、文档与体验的可读性与可维护性。
 
-All submissions, including submissions by project members, require review. We
-use GitHub pull requests for this purpose. Consult
-[GitHub Help](https://help.github.com/articles/about-pull-requests/) for more
-information on using pull requests.
+## 快速开始 / Quick Start
 
-### Contributor Guide
+1. **阅读行为准则**：请先阅读《[行为准则](./CODE_OF_CONDUCT.md)》，确保我们共享相同的协作基线。
+2. **设定环境**：克隆仓库后，运行 `make setup` 或参考项目根目录的 README，完成依赖安装与本地配置。
+3. **认领任务**：在 Issue 或待办列表中选择适合自己的任务，留下评论避免重复劳动；也欢迎直接提出新想法。
+4. **创建分支**：以 `feature/描述` 或 `fix/描述` 命名分支，保证命名清晰易懂。
+5. **保持同步**：在开发期间定期同步主分支的最新变更，减少后续冲突。
 
-You may follow these steps to contribute:
+## 开发流程 / Development Flow
 
-1. **Fork the official repository.** This will create a copy of the official repository in your own account.
-2. **Sync the branches.** This will ensure that your copy of the repository is up-to-date with the latest changes from the official repository.
-3. **Work on your forked repository's feature branch.** This is where you will make your changes to the code.
-4. **Commit your updates on your forked repository's feature branch.** This will save your changes to your copy of the repository.
-5. **Submit a pull request to the official repository's main branch.** This will request that your changes be merged into the official repository.
-6. **Resolve any linting errors.** This will ensure that your changes are formatted correctly.
+1. 明确需求与完成标准，必要时在 Issue 中记录设计或思路。
+2. 按照“先测试/文档、后实现”的顺序推进，确保行为可验证。
+3. 提交前检查 lint、格式化、测试等本地校验是否通过。
+4. 发起 Pull Request（PR），描述背景、方案与验证方式，附上截图或日志（如适用）。
+5. 与评审者沟通反馈，必要时拆分或补充文档，直到 PR 获批并合并。
 
-Here are some additional things to keep in mind during the process:
+## 提交信息规范 / Commit Style
 
-- **Test your changes.** Before you submit a pull request, make sure that your changes work as expected.
-- **Be patient.** It may take some time for your pull request to be reviewed and merged.
+- 使用 [Conventional Commits](https://www.conventionalcommits.org/) 约定，示例：`feat: add keyboard shortcut for note panel`。
+- 每次提交聚焦单一变更，保证 git 历史清晰、易于回滚。
+- 在提交信息正文中简要说明动机、实现方式与潜在影响。
+
+## 质量保障 / Quality Checklist
+
+- 运行与变更相关的单元测试、集成测试或脚本验证。
+- 更新受影响的文档、示例、截图与翻译条目。
+- 检查可访问性（如是前端界面）与性能影响。
+- 为新增功能或接口补充至少一种自动化或手动验证方式。
+- 对外部依赖或安全敏感改动额外说明风险与缓解措施。
+
+## 沟通约定 / Communication
+
+- 默认使用 GitHub Issues、Discussions 或 PR 评论沟通；实时聊天仅在双方同意且必要时使用。
+- 回复时间通常不超过 2 个工作日，如需更久请在留言中说明。
+- 当话题与原 Issue 不再相关时，建议开启新的讨论线程以保持条理。
+- 同意被引用或匿名引用你的观点时，请明确授权方式。
+
+## 文档与知识沉淀 / Documentation
+
+- 在根目录或相关模块补充 `README`/`docs` 说明，确保后续贡献者能快速上手。
+- 对复杂逻辑添加内联注释，并在 PR 描述中解释关键算法或权衡。
+- 将常见问题、设计决策与术语写入 `/docs` 或 Wiki，方便日后查询。
+
+## PR 自检单 / Pull Request Checklist
+
+在创建 PR 前，请确认：
+
+- [ ] 相关 Issue 已链接或在 PR 描述中说明背景。
+- [ ] 主要变更点与解决方案已清晰阐述。
+- [ ] 所有必要的测试或验证结果已贴出。
+- [ ] 文档、配置、截图等同步更新。
+- [ ] 通过本地 lint / formatter 检查。
+- [ ] 代码遵循本项目的风格与约定。
+
+## 额外说明 / Additional Notes
+
+- 若你只是想分享想法、提出改进建议，也欢迎直接开 Issue；请附上动机、预期收益与潜在影响。
+- 如果贡献需要访问私有信息或服务，请先与维护者沟通以确认权限与安全要求。
+- 任何时候都可以根据自身状况调整参与深度；健康与生活优先。
+
+感谢你的投入！期待看到你的创意、代码与反馈。
