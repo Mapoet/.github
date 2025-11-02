@@ -1,0 +1,46 @@
+name: ✨ 功能提案 / Feature Request
+description: 分享一个对 Mapoet 仓库有帮助的新想法或改进。
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你的创意！此模板用于 Mapoet 账号的所有仓库，请清晰阐述动机与潜在影响，方便维护者评估优先级。
+  - type: input
+    id: target-project
+    attributes:
+      label: 目标仓库
+      description: 说明提案主要影响的仓库，例如 `Mapoet/project-name`。
+      placeholder: Mapoet/project-name
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 需要解决的问题
+      description: 当前流程、体验或功能存在什么痛点？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 解决方案描述
+      description: 描述你建议的方案、关键步骤或界面变化。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 其他方案或权衡
+      description: 列出你考虑过的其他方法及其优缺点。
+  - type: textarea
+    id: impact
+    attributes:
+      label: 影响范围
+      description: 说明该变更对其他 Mapoet 仓库或工作流的影响，以及是否需要迁移指引。
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考资料
+      description: 添加相关链接、截图或设计稿（如有）。

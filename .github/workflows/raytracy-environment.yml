@@ -1,0 +1,73 @@
+name: RayTracy Environment
+
+on:
+  workflow_call:
+    inputs:
+      build-type:
+        description: "CMake build type used when configuring RayTracy"
+        type: string
+        default: Release
+      run-tests:
+        description: "Set to true to execute ctest after building"
+        type: boolean
+        default: true
+      extra-cmake-args:
+        description: "Additional arguments forwarded to the CMake configure step"
+        type: string
+        default: ""
+
+jobs:
+  setup-and-test:
+    name: Configure & Test RayTracy
+    runs-on: ubuntu-22.04
+    env:
+      BUILD_DIR: build
+      LIBTORCH_URL: https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-2.3.1%2Bcpu.zip
+      LIBTORCH_DIR: /opt/libtorch
+      CMAKE_PREFIX_PATH: /opt/libtorch
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            build-essential \
+            cmake \
+            ninja-build \
+            libglm-dev \
+            libsdl2-dev \
+            libsdl2-image-dev \
+            libglew-dev \
+            libgl1-mesa-dev \
+            libxrandr-dev \
+            libxi-dev \
+            libxxf86vm-dev \
+            osgearth \
+            libosgearth-dev \
+            gdal-bin \
+            libgdal-dev
+
+      - name: Install LibTorch
+        run: |
+          curl -L "$LIBTORCH_URL" -o /tmp/libtorch.zip
+          sudo rm -rf "$LIBTORCH_DIR"
+          sudo unzip -q /tmp/libtorch.zip -d /opt
+        shell: bash
+
+      - name: Configure CMake project
+        run: |
+          cmake -S . -B "$BUILD_DIR" \
+            -G Ninja \
+            -DCMAKE_BUILD_TYPE=${{ inputs["build-type"] }} \
+            -DTorch_DIR="$LIBTORCH_DIR/share/cmake/Torch" \
+            ${{ inputs["extra-cmake-args"] }}
+
+      - name: Build RayTracy
+        run: cmake --build "$BUILD_DIR"
+
+      - name: Run tests
+        if: inputs.run-tests
+        run: |
+          ctest --test-dir "$BUILD_DIR" --output-on-failure

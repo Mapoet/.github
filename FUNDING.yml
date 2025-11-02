@@ -1,0 +1,7 @@
+# 在此配置 Mapoet 的赞助渠道，支持会在所有继承模板的仓库展示
+# 参考文档：https://docs.github.com/sponsors/influencing-the-way-people-can-sponsor-you
+
+github: Mapoet
+patreon: mapoet
+custom:
+  - https://mapoet.dev/support

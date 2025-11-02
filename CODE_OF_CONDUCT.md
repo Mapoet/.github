@@ -1,90 +1,57 @@
-# Code of Conduct
+# Mapoet 行为准则 / Mapoet Code of Conduct
 
-## Our Pledge
+本准则适用于 Mapoet 账号下的所有公共项目以及与之相关的社区空间。它的目标是在跨项目协作时，持续为每位贡献者提供安全、尊重与高效的环境。任何参与 Mapoet 项目的人都应遵守以下约定。
 
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, gender identity and expression, level of
-experience, education, socio-economic status, nationality, personal appearance,
-race, religion, or sexual identity and orientation.
+## 我们的承诺 / Our Pledge
 
-## Our Standards
+- 尊重每一位贡献者的背景、身份、表达方式与学习节奏。
+- 以清晰、体贴的沟通支持高质量的协作，无论是同步还是异步交流。
+- 在面对分歧时保持好奇与建设性，优先寻找对项目和个人成长最好的解决方案。
+- 积极维护身心健康：允许休息、设定边界，并尊重他人的时间与精力。
+- 维护者会以透明的方式处理冲突，确保流程可追溯、结果可解释。
 
-Examples of behavior that contributes to creating a positive environment
-include:
+## 倡导的行为 / Expected Behaviours
 
-*   Using welcoming and inclusive language
-*   Being respectful of differing viewpoints and experiences
-*   Gracefully accepting constructive criticism
-*   Focusing on what is best for the community
-*   Showing empathy towards other community members
+- 使用包容的语言，并主动确认需求或不确定之处。
+- 分享决策背景、设计权衡与经验总结，帮助所有人理解上下文。
+- 对反馈保持开放心态：解释、倾听、必要时求证或调整。
+- 关注知识传承，及时更新文档、注释与讨论结论。
+- 遵循 Mapoet 的贡献流程、代码风格和安全要求。
 
-Examples of unacceptable behavior by participants include:
+## 不被接受的行为 / Unacceptable Behaviours
 
-*   The use of sexualized language or imagery and unwelcome sexual attention or
-    advances
-*   Trolling, insulting/derogatory comments, and personal or political attacks
-*   Public or private harassment
-*   Publishing others' private information, such as a physical or electronic
-    address, without explicit permission
-*   Other conduct which could reasonably be considered inappropriate in a
-    professional setting
+- 任何形式的骚扰、歧视、仇恨言论或人身攻击。
+- 恶意泄露他人的隐私信息（包括联系方式、账号、真实身份等）。
+- 刻意制造噪声、散布错误信息，或破坏协作工具的正常使用。
+- 持续打断、否定、贬损他人的劳动成果或情绪。
+- 蓄意绕过安全策略、许可要求或道德底线。
 
-## Our Responsibilities
+## 适用范围 / Scope
 
-Project maintainers are responsible for clarifying the standards of acceptable
-behavior and are expected to take appropriate and fair corrective action in
-response to any instances of unacceptable behavior.
+- 此准则适用于所有 Mapoet 管理的 GitHub 仓库、Discussions、Issues、Pull Requests、实时沟通渠道以及线下活动。
+- 第三方在引用或复用本仓库模板时，也应保证衍生内容符合此精神。
 
-Project maintainers have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, or to ban temporarily or permanently any
-contributor for other behaviors that they deem inappropriate, threatening,
-offensive, or harmful.
+## 维护者的责任 / Maintainer Responsibilities
 
-## Scope
+- 明确阐述并维护上述准则，及时更新可能引发误解的内容。
+- 公平、透明地审查报告与争议，并在必要时采取纠正措施。
+- 保护举报人的隐私，避免二次伤害或报复。
+- 在处理冲突时优先使用事实依据、公开记录与同理心。
 
-This Code of Conduct applies both within project spaces and in public spaces
-when an individual is representing the project or its community. Examples of
-representing a project or community include using an official project e-mail
-address, posting via an official social media account, or acting as an appointed
-representative at an online or offline event. Representation of a project may be
-further defined and clarified by project maintainers.
+## 冲突解决流程 / Conflict Resolution
 
-This Code of Conduct also applies outside the project spaces when the Project
-Steward has a reasonable belief that an individual's behavior may have a
-negative impact on the project or its community.
+1. 鼓励相关方先在指定讨论渠道中，以事实与尊重为前提沟通。
+2. 如无法化解或存在安全隐患，请立即向维护者报告。
+3. 维护者会根据情况：澄清期望、协调对话、要求更正、暂时或永久限制访问权限。
+4. 若问题涉及法律或道德风险，将在遵守适用法规的前提下升级处理。
 
-## Conflict Resolution
+## 举报方式 / Reporting
 
-We do not believe that all conflict is bad; healthy debate and disagreement
-often yield positive results. However, it is never okay to be disrespectful or
-to engage in behavior that violates the project’s code of conduct.
+- 通过 GitHub Issues、Discussions 或仓库中注明的联系渠道私信维护者。
+- 举报时请尽可能提供时间线、相关链接、截图或证据，帮助我们准确评估。
+- 我们将在收到报告后的 5 个工作日内确认，并在 10 个工作日内给出后续步骤或结论。
+- 对举报人的身份与信息将严格保密，除非得到明确授权或法律要求披露。
 
-If you see someone violating the code of conduct, you are encouraged to address
-the behavior directly with those involved. Many issues can be resolved quickly
-and easily, and this gives people more control over the outcome of their
-dispute. If you are unable to resolve the matter for any reason, or if the
-behavior is threatening or harassing, report it. We are dedicated to providing
-an environment where participants feel welcome and safe.
+## 致谢 / Attribution
 
-Reports should be directed to [a2a-coc@googlegroups.com](mailto:a2a-coc@googlegroups.com), the
-Project Steward(s) for A2A. It is the Project Steward’s duty to
-receive and address reported violations of the code of conduct. They will then
-work with a committee consisting of representatives from the A2A project and leadership. 
-
-We will investigate every complaint, but you may not receive a direct response.
-We will use our discretion in determining when and how to follow up on reported
-incidents, which may range from not taking action to permanent expulsion from
-the project and project-sponsored spaces. We will notify the accused of the
-report and provide them an opportunity to discuss it before any action is taken.
-The identity of the reporter will be omitted from the details of the report
-supplied to the accused. In potentially harmful situations, such as ongoing
-harassment or threats to anyone's safety, we may take action without notice.
-
-## Attribution
-
-This Code of Conduct is adapted from the Contributor Covenant, version 1.4,
-available at
-https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+本准则融合了 Contributor Covenant、Google Open Source Code of Conduct 等优秀项目的经验，并根据 Mapoet 的协作需求做了适配。欢迎在致谢原出处的前提下复用或改编。
