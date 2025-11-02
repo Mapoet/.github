@@ -1,0 +1,58 @@
+name: RayTracy Environment
+
+on:
+  workflow_call:
+    inputs:
+      build-type:
+        description: "CMake build type used when configuring RayTracy"
+        type: string
+        default: Release
+      run-tests:
+        description: "Set to true to execute ctest after building"
+        type: boolean
+        default: true
+      extra-cmake-args:
+        description: "Additional arguments forwarded to the CMake configure step"
+        type: string
+        default: ""
+
+jobs:
+  setup-and-test:
+    name: Configure & Test RayTracy
+    runs-on: ubuntu-22.04
+    env:
+      BUILD_DIR: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            build-essential \
+            cmake \
+            ninja-build \
+            libglm-dev \
+            libsdl2-dev \
+            libsdl2-image-dev \
+            libglew-dev \
+            libgl1-mesa-dev \
+            libxrandr-dev \
+            libxi-dev \
+            libxxf86vm-dev
+
+      - name: Configure CMake project
+        run: |
+          cmake -S . -B "$BUILD_DIR" \
+            -G Ninja \
+            -DCMAKE_BUILD_TYPE=${{ inputs["build-type"] }} \
+            ${{ inputs["extra-cmake-args"] }}
+
+      - name: Build RayTracy
+        run: cmake --build "$BUILD_DIR"
+
+      - name: Run tests
+        if: inputs.run-tests
+        run: |
+          ctest --test-dir "$BUILD_DIR" --output-on-failure
