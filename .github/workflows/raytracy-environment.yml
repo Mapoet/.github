@@ -61,14 +61,14 @@ jobs:
         run: |
           cmake -S . -B "$BUILD_DIR" \
             -G Ninja \
-            -DCMAKE_BUILD_TYPE=${{ inputs["build-type"] }} \
+            -DCMAKE_BUILD_TYPE=${{ inputs['build-type'] }} \
             -DTorch_DIR="$LIBTORCH_DIR/share/cmake/Torch" \
-            ${{ inputs["extra-cmake-args"] }}
+            ${{ inputs['extra-cmake-args'] }}
 
       - name: Build RayTracy
         run: cmake --build "$BUILD_DIR"
 
       - name: Run tests
-        if: inputs.run-tests
+        if: inputs['run-tests']
         run: |
           ctest --test-dir "$BUILD_DIR" --output-on-failure
