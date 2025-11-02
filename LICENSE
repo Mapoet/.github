@@ -1,7 +1,7 @@
 Personal Open License (POL) 1.0
 ================================
 
-本许可证旨在为个人或小型团队创建的项目提供灵活、清晰的授权方式，让你可以安心分享与合作，同时保留对作品方向的主导权。The goal of this license is to keep the project open for collaboration while acknowledging the maintainer’s authorship and boundaries.
+本许可证适用于 `Mapoet/.github` 仓库中提供的文档、模板与配置示例。其目标是在保持开放协作的同时，明确署名权与责任边界。The goal of this license is to keep the project open for collaboration while acknowledging the maintainer’s authorship and boundaries.
 
 1. 许可范围 / Grant of Rights
    --------------------------------
@@ -10,7 +10,7 @@ Personal Open License (POL) 1.0
 
 2. 使用条件 / Conditions
    --------------------------------
-   - 在公开使用、再发布或分发衍生作品时，保留原作者署名并链接至项目仓库。
+   - 在公开使用、再发布或分发衍生作品时，保留原作者署名并链接至 `https://github.com/Mapoet/.github`。
    - 清晰标注你的修改内容与时间，避免与原项目混淆。
    - 若衍生作品改变了核心体验或引入潜在风险，请在文档中明确说明。
    - 禁止以任何可能误导他人认为原作者背书、担保或参与的方式使用本项目。
@@ -18,12 +18,12 @@ Personal Open License (POL) 1.0
 3. 贡献内容 / Contributions
    --------------------------------
    - 向仓库提交的贡献默认采用与本许可证相同的条款。
-   - 贡献者保留其原创部分的署名权，并同意维护者在项目范围内使用、修改、分发。
+   - 贡献者保留其原创部分的署名权，并同意 Mapoet 在项目范围内使用、修改、分发。
 
 4. 责任与保证 / Disclaimer
    --------------------------------
    - 本项目“按原样”提供，不附带任何明示或暗示的保证，包括但不限于适销性、特定用途适用性或非侵权声明。
-   - 维护者与贡献者对因使用本项目产生的直接或间接损失不承担责任。
+   - Mapoet 维护者与贡献者对因使用本项目产生的直接或间接损失不承担责任。
 
 5. 终止条款 / Termination
    --------------------------------
@@ -37,7 +37,7 @@ Personal Open License (POL) 1.0
 
 7. 版权信息 / Copyright
    --------------------------------
-   - Copyright (c) 2024, Repository Maintainer.
+   - Copyright (c) 2024, Mapoet.
    - 欢迎在保留本许可证的前提下自由分享，并根据自身需求二次改编。
 
-如需定制化授权、商业合作或其他特殊安排，请通过仓库中的联系方式与维护者沟通。
+如需定制化授权、商业合作或其他特殊安排，请通过本仓库列出的联系方式与维护者沟通。
