@@ -1,0 +1,56 @@
+name: 🐞 Bug 报告 / Bug Report
+description: 帮助我们在 Mapoet 项目中定位与修复问题。
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你的反馈！这个模板会在 Mapoet 账号下的项目中复用，请尽量提供完整信息，帮助维护者快速定位问题。
+  - type: input
+    id: affected-project
+    attributes:
+      label: 受影响的仓库
+      description: 请写明问题出现的具体仓库与分支，例如 `Mapoet/project-name@main`。
+      placeholder: Mapoet/project-name
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: 问题概述
+      description: 简要描述发生了什么，与预期行为的差异。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请列出完整的复现步骤，包括命令、输入或配置。
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+      description: 说明理想情况下应该发生什么。
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行环境
+      description: 包括操作系统、工具版本、浏览器等信息。
+      placeholder: macOS 14 / Node.js 20.11 / Chrome 123...
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志与截图
+      description: 附上相关日志、错误信息、截图或录屏链接。
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他补充
+      description: 提供任何可能有助于排查的问题线索。

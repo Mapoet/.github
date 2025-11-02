@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🌐 Mapoet 支持与常见问题
+    url: https://github.com/Mapoet/.github/blob/main/SUPPORT.md
+    about: 如果问题与具体仓库无关，或需要一般性支持，请先查看此文档。
+  - name: 🔒 安全漏洞上报
+    url: https://github.com/Mapoet/.github/blob/main/SECURITY.md
+    about: 如需私下报告安全问题，请按照安全指南联系维护者。
+defaults:
+  issue:
+    name: General Issue
+    description: "General issue template"

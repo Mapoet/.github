@@ -1,0 +1,8 @@
+# 默认代码审阅责任人 / Default reviewers
+# 语法参考：https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+* @Mapoet
+
+# 可以按目录或文件继续添加，例如：
+# docs/ @Mapoet/doc-team
+# .github/workflows/ @Mapoet/automation

@@ -1,0 +1,72 @@
+name: Mapoet Reusable CI
+
+on:
+  workflow_call:
+    inputs:
+      run-tests:
+        description: "是否执行测试命令"
+        required: false
+        default: false
+        type: boolean
+      node-version:
+        description: "Node.js 版本（如需要）"
+        required: false
+        default: '20'
+        type: string
+    secrets:
+      token:
+        required: false
+
+jobs:
+  setup:
+    name: Checkout & Setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        if: inputs.run-tests
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: npm
+
+      - name: Install dependencies
+        if: inputs.run-tests
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f pnpm-lock.yaml ]; then
+            npm install -g pnpm
+            pnpm install --frozen-lockfile
+          elif [ -f yarn.lock ]; then
+            corepack enable
+            yarn install --frozen-lockfile
+          else
+            echo "No lockfile found; skipping package manager install"
+          fi
+
+      - name: Run tests
+        if: inputs.run-tests
+        run: |
+          if [ -f package.json ]; then
+            npm test --if-present
+          else
+            echo "No package.json; skipping tests"
+          fi
+
+  lint:
+    name: Static Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run default lint script
+        run: |
+          if [ -f package.json ]; then
+            npm run lint --if-present
+          else
+            echo "No lint command defined; consider overriding this job.";
+          fi
