@@ -1,8 +1,28 @@
-# 默认代码审阅责任人 / Default reviewers
-# 语法参考：https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# Mapoet Global Code Ownership Map / 全局代码审阅归属
+# --------------------------------------------------
+# 作用 / Purpose:
+#   指定 Mapoet 生态下默认的代码审阅与合并责任人，确保核心资产的权属清晰、反馈及时。
+#   GitHub 会在 Pull Request 创建时自动请求下列账号审阅。
+# 维护约定 / Maintenance Notes:
+#   - 覆盖范围：所有继承本仓库 CODEOWNERS 的项目。
+#   - 自定义：若单仓库需要不同设置，可在该仓库中新增 `.github/CODEOWNERS` 覆盖。
 
+# 默认责任人（全局）/ Default owner for all files
 * @Mapoet
 
-# 可以按目录或文件继续添加，例如：
-# docs/ @Mapoet/doc-team
-# .github/workflows/ @Mapoet/automation
+# 文档、社区约定相关内容 / Documentation & community policies
+CODE_OF_CONDUCT.md @Mapoet
+CONTRIBUTING.md    @Mapoet
+LICENSE            @Mapoet
+README.md          @Mapoet
+SECURITY.md        @Mapoet
+SUPPORT.md         @Mapoet
+
+# 自动化与工作流模板 / Automation & workflows
+.github/workflows/ @Mapoet
+
+# Issue 与 PR 模板 / Issue & PR templates
+ISSUE_TEMPLATE/          @Mapoet
+PULL_REQUEST_TEMPLATE.md @Mapoet
+
+# 如需引入额外协作者，请在 PR 中说明用途并更新此文件。

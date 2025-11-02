@@ -28,6 +28,15 @@
     run-tests: true
   ```
 
+- **RayTracy 环境工作流**：针对 `Mapoet/RayTracy` 所需的图形与构建依赖，新增了 `raytracy-environment.yml`。可在仓库中调用以自动完成依赖安装、CMake 构建与 `ctest` 测试：
+
+  ```yaml
+  uses: Mapoet/.github/.github/workflows/raytracy-environment.yml@main
+  with:
+    build-type: RelWithDebInfo
+    run-tests: true
+  ```
+
 - **社区文档**：`CODE_OF_CONDUCT.md`、`CONTRIBUTING.md`、`SECURITY.md` 等文档会成为其他仓库的默认入口，让贡献者始终能找到一致的协作规范。
 
 ## 自定义或覆盖
