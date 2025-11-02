@@ -44,6 +44,7 @@ jobs:
             libxrandr-dev \
             libxi-dev \
             libxxf86vm-dev \
+            libgsl-dev \
             osgearth \
             libosgearth-dev \
             gdal-bin \
